@@ -3,11 +3,12 @@
 <page>
   
   <property name="catalogid">catalog</property>
-  <property name="applicationid">eme</property>
+  <property name="applicationid">profile</property>
   <property name="fallbackdirectory">/community/default</property>
+
   <property name="findroot">/site/blockfind</property>
   <property name="sidebarcomponent">eme</property>
-  <property name="communityhome">/${siteid}/eme</property> <!-- TODO: delete? -->
+  <property name="communityhome">/${siteid}/profile</property> 
   <property name="searchtypeFromRequest">true</property>
   <property name="profilemanagerid">${catalogid}</property>
   <property name="thumbsize">thumb</property>
@@ -18,15 +19,13 @@
   <property name="bs">4</property>
   <property name="enableprofilefilters">true</property>
   <property name="collectionroot">/${applicationid}/views/modules/librarycollection/media</property>
-  <property name="fallbackdirectory">/community/default</property>
   <property name="login-path">/${applicationid}/authentication/nopermissions.html</property>
-  <property name="applicationid">eme</property>
+  
   <property name="editable">false</property>
   
   <property name="hitsname">hits</property>
   <property name="allowguestregistration">false</property>
   <property name="makeversion">false</property>
-  <property name="catalogid">catalog</property>
   <property name="systemfromemailname">EnterMedia</property>
   <property name="shownav">true</property>
   
@@ -41,7 +40,7 @@
   <path-action name="DesktopModule.loadDesktop"/>
   <path-action name="DataEditModule.loadEditHome"/>
   <path-action name="DataEditModule.loadSearchHome"/>
-  <path-action alltypes="true" name="MediaArchiveModule.getMediaArchive"/>
+  <path-action name="MediaArchiveModule.getMediaArchive" alltypes="true" />
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="searcherManager"/>
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="userManager"/>
   <path-action name="SessionValue.loadSessionVariable" bean="moduleManager"/>
@@ -62,13 +61,7 @@
   
   <path-action name="FinderModule.loadTopMenu" />
 
-  <property name="allowguestregistration">true</property>
-
   <inner-layout>/${applicationid}/theme/layouts/applicationcontent.html</inner-layout>
-
-  <permission name="view">
-    <boolean value="true"/>
-  </permission>
 
   <style cancel="true" id="jquery"/>
   <style id="jqueryui-css" href="/${applicationid}/components/javascript/jquery-ui/1.14/jquery-ui.css"/>
@@ -134,8 +127,14 @@
   <script defer="true" src="/${applicationid}/components/javascript/chart/Chart.bundle.js" id="chartjs"/>
   <script src="/${applicationid}/components/javascript/jquery.cuepoint.js" id="jscuepoint"/>
   <script src="/${applicationid}/views/modules/asset/editor/closedcaptions/closedcaptions.js" id="jsclosedcaptions"/>
-  
 
+
+  <permission name="view">
+      <or>
+      <userprofile name="view" value="true"/>
+      <boolean value="true"/>
+      </or>
+  </permission>
   <permission name="quicksearch">
     <userprofile name="quicksearch" value="true"/>
   </permission>
@@ -179,9 +178,6 @@
   <permission name="viewbasket">
     <userprofile name="viewbasket" value="true"/>
   </permission>
-  <permission name="shareasset">
-    <userprofile name="shareasset" value="true"/>
-  </permission>
   <permission name="sharetosocialmedia">
     <userprofile name="sharetosocialmedia" value="true"/>
   </permission>
@@ -223,9 +219,6 @@
   </permission>
   <permission name="downloadfpo">
     <userprofile name="downloadfpo" value="true"/>
-  </permission>
-  <permission name="viewassetdownloads">
-    <userprofile name="viewassetdownloads" value="true"/>
   </permission>
   <permission name="viewmediaviewer">
     <userprofile name="viewmediaviewer" value="true"/>
@@ -415,9 +408,6 @@
   <permission name="assetannotate">
     <userprofile name="assetannotate" value="true"/>
   </permission>
-  <permission name="view">
-    <userprofile name="view" value="true"/>
-  </permission>
   <permission name="viewcategorytree">
     <userprofile name="viewcategorytree" value="true"/>
   </permission>
@@ -453,9 +443,6 @@
   </permission>
   <permission name="copycategory">
     <userprofile name="copycategory" value="true"/>
-  </permission>
-  <permission name="viewmediaedit">
-    <userprofile name="viewmediaedit" value="true"/>
   </permission>
   <permission name="viewallorders">
     <userprofile name="viewallorders" value="true"/>
@@ -510,9 +497,6 @@
   </permission>
   <permission name="togglesidebar">
     <userprofile name="togglesidebar" value="true"/>
-  </permission>
-  <permission name="viewsidebarhelp">
-    <userprofile name="viewsidebarhelp" value="true"/>
   </permission>
   <permission name="viewsmartorganizer">
     <userprofile name="viewsmartorganizer" value="true"/>
