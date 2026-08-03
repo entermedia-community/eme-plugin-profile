@@ -1417,7 +1417,7 @@ div#hiddenoverlay .overlay-margin {
 .lighttheme .overlay-close.largeicon:hover {
 	color: var(--default-text);
 }
-.entityclose {
+.closeemdialog {
 	border: none;
 	outline: none;
 	width: 30px;
@@ -1431,13 +1431,13 @@ div#hiddenoverlay .overlay-margin {
 	border-radius: var(--btn-radius);
 	cursor: pointer;
 }
-.entityclose:hover {
+.closeemdialog:hover {
 	background: #c1c1c1;
 }
-.lighttheme .entityclose {
+.lighttheme .closeemdialog {
 	background: #dfdfdf;
 }
-.lighttheme .entityclose:hover {
+.lighttheme .closeemdialog:hover {
 	background: #c1c1c1;
 }
 div#hiddenoverlay span.glyphicon.glyphicon-new-window {
@@ -4819,7 +4819,7 @@ ul.summary-secondary-nav li a:hover {
 .site-switcher .btn,
 .entityNavBarContainer a.ajax,
 #header .btn-topnav,
-.entityclose {
+.closeemdialog {
 	box-shadow: var(--raised-shadow);
 }
 
