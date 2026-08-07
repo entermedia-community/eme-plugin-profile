@@ -43,6 +43,11 @@
           
           $pages.include("./sidebar-data-project.html", $context)
       #end
+xxxx
+      <div class="pb-2">
+        $pages.include("./sidebar-teamchat.html", $context)
+      </div>
+
 
       #ifnull($moduleid)
         #set($entitymodule = $emeprofile)
@@ -57,11 +62,8 @@
   ##    $pages.include("./sidebar-services.html", $context)
   ##  </div>
 
-    <div class="pb-2">
-      $pages.include("./sidebar-teamchat.html", $context)
-    </div>
-
-    $pages.include("./sidebar-admin.html", $context)
+    
+   
 
   </div>
   

@@ -1,3 +1,4 @@
+
 #if(!$messages.isEmpty())
 <div class="sidebar-section-btn"
   style="background-color: #f4f4f6;">
@@ -13,7 +14,7 @@
   
   #if(!$messages.isEmpty())
     #foreach( $message in $messages )
-      #set( $topic = $mediaarchive.getCachedData("collectiveproject",$message.channel))
+      #set( $topic = $mediaarchive.getCachedData("collectiveproject",$message.entityid))
       #set( $project = $mediaarchive.getCachedData("librarycollection",$topic.parentcollectionid))
       #set( $community = $mediaarchive.getCachedData("communitytag",$project.communitytag))
       #set( $otherperson =  $chatManager.getOtherChatUser($project,$user) )
