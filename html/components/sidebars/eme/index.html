@@ -43,8 +43,7 @@
           
           $pages.include("./sidebar-data-project.html", $context)
       #end
-
-      #ifnull($moduleid)
+      #ifnull($librarycol)
         #set($entitymodule = $emeprofile)
         #set($moduleid = "emeprofile")
         $context.putPageValue("moduleid", $moduleid)
@@ -53,15 +52,12 @@
       
     </div>
 
-  ##  <div class="pb-2">
-  ##    $pages.include("./sidebar-services.html", $context)
-  ##  </div>
-
-    <div class="pb-2">
+  <div class="pb-2">
       $pages.include("./sidebar-teamchat.html", $context)
-    </div>
+  </div>
 
-    $pages.include("./sidebar-admin.html", $context)
+
+   
 
   </div>
   

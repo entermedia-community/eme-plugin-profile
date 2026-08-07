@@ -2,7 +2,8 @@
 <div class="sidebar-section-btn"
   style="background-color: #f4f4f6;">
   <span class="d-flex align-items-center gap-2">
-    <i class="bi bi-clock-history sect-icon"></i>[[Agent Chat]]
+    #set($teamsmodule = $mediaarchive.query("module").exact("id", "librarycollection").searchOne())
+    <i class="bi bi-${teamsmodule.moduleicon} sect-icon"></i> [[Teams]]
   </span>
 </div>
 
