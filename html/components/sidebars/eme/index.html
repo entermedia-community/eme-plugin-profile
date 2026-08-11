@@ -8,7 +8,9 @@
      
     <div class="sidebar-brand">
       <a href="${applink}">
-        <img src="$!{logourl}" alt="[[EME]]" style="height: $!{logoheight}px; width: $!{logowidth}px;object-fit:contain;" class="me-2">
+        <img src="$!{logourl}" 
+          alt="[[EME]]" 
+          style="height: $!{logoheight}px; width: $!{logowidth}px;object-fit:contain;" class="me-2">
       </a>
     </div>
     <button class="btn btn-sm icon-btn" id="emeSidebarCollapseBtn" title="[[Collapse sidebar]]">
@@ -19,20 +21,21 @@
   <div class="sidebar-scroll mt-1">
 
     <div class="pb-2">
-      <a href="/${emeprofile.urlname}" 
-        class="ajax file-row" 
-        data-targetdiv="applicationstructure"
-        data-oemaxlevel="3"
-        data-updateurl="true"
-        title="#text($emeprofile) [[Profile]]">
-        #set( $userimageurl = $mediaarchive.asLinkToUserProfile($user) )
-					
-					#if(!$userimageurl)
-						#set( $userimageurl = "$!apphome/theme/images/user.svg" )
-					#end 
-          <img  src="${userimageurl}" title="$!followeruser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
-        <span class="f-name">#text($emeprofile) [[Profile]]</span>
-      </a>
+      #if($user.getId() == $emeprofile.owner)
+        <a href="/${emeprofile.urlname}" 
+          class="ajax file-row" 
+          data-targetdiv="applicationstructure"
+          data-oemaxlevel="3"
+          data-updateurl="true"
+          title="#text($emeprofile) [[Profile]]">
+          #set( $userimageurl = $mediaarchive.asLinkToUserProfile($user) )
+            #if(!$userimageurl)
+              #set( $userimageurl = "$!apphome/theme/images/user.svg" )
+            #end 
+            <img  src="${userimageurl}" title="$!followeruser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
+          <span class="f-name">#text($emeprofile) [[Profile]]</span>
+        </a>
+      #end
     </div>
   
     
