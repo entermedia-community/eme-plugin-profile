@@ -20,7 +20,7 @@
     #set($rendertype = $viewdata.rendertype)
 
     <a 
-    href="/profiles/${emeprofile.urlname}/data/${entityview.id}"  
+    href="/${emeprofile.urlname}/data/${entityview.id}"  
       class="ajax activelistener file-row #if( $topmenuselected == $entityview.getId()) active#end" 
       data-targetdivinner="applicationcontent"
       data-updateurl="true"
