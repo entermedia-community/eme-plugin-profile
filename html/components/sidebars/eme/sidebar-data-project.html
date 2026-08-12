@@ -1,6 +1,7 @@
+<a href="/$librarycol.urlname" title="#text($librarycol)">
 <div class="sidebar-section-btn" style="background-color: #f2f2f2;">
-  <a href="/$librarycol.urlname">
-  <span class="d-flex align-items-center">
+  <div class="d-flex align-items-center">
+    
     #if($librarycol.assetportrait)
       #set($asset = $mediaarchive.getAsset($librarycol.assetportrait))
       #set($link = $mediaarchive.asLinkToPreview($asset,"image200x200"))
@@ -9,10 +10,10 @@
     #end
     <img class="session-thumb" src="${link}" alt="#text($librarycol)" />
     #text($librarycol)
-  </span> 
-  </a>
+    
+  </div>
 </div>
-
+</a>
 <div class="py-2" id="sbFilesBody">
   #set($enttiyviews = $mediaarchive.query("view").exact("moduleid", "librarycollection").exact("systemdefined","false").sort("orderingUp").named("view").search($context) )
     
