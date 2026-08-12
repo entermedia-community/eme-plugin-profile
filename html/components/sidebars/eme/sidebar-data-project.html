@@ -1,6 +1,6 @@
 <div class="sidebar-section-btn" style="background-color: #f2f2f2;">
+  <a href="/$librarycol.urlname">
   <span class="d-flex align-items-center">
-
     #if($librarycol.assetportrait)
       #set($asset = $mediaarchive.getAsset($librarycol.assetportrait))
       #set($link = $mediaarchive.asLinkToPreview($asset,"image200x200"))
@@ -10,6 +10,7 @@
     <img class="session-thumb" src="${link}" alt="#text($librarycol)" />
     #text($librarycol)
   </span> 
+  </a>
 </div>
 
 <div class="py-2" id="sbFilesBody">
