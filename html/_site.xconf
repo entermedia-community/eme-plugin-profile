@@ -109,15 +109,13 @@
   <style id="app-com-css" href="/${applicationid}/theme/styles/theme-community.cssNEEDTHIS?"/>
 
   <style id="finder-css" href="/finder/find/theme/styles/theme.css"/>
-
   <style id="eme-css" href="/${applicationid}/theme/styles/theme.css"/>
 
-  <style id="mediaplayer" href="/finder/find/theme/styles/pages/mediaplayer.css"/>
-  <style id="eme-mediaplayer" href="/${applicationid}/theme/styles/pages/mediaplayer.css"/>
-
-  <style id="results-css" href="/finder/find/theme/styles/pages/results.css" />
+  <style id="finder-results-css" href="/finder/find/theme/styles/pages/results.css" />
   <style id="eme-results-css" href="/${applicationid}/theme/styles/pages/results.css" />
 
+  <style id="finder-mediaplayer" href="/finder/find/theme/styles/pages/mediaplayer.css"/>
+  <style id="eme-mediaplayer" href="/${applicationid}/theme/styles/pages/mediaplayer.css"/>
 
   <script defer="true" src="/${applicationid}/components/javascript/jquery.html5_upload.js" id="html5_upload"/>
   <script defer="true" src="/${applicationid}/components/javascript/emedia/upload.js" id="upload"/>
