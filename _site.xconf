@@ -41,7 +41,7 @@
   <path-action name="DesktopModule.loadDesktop"/>
   <path-action name="DataEditModule.loadEditHome"/>
   <path-action name="DataEditModule.loadSearchHome"/>
-  <path-action alltypes="true" name="MediaArchiveModule.getMediaArchive"/>
+  <path-action name="MediaArchiveModule.getMediaArchive"  alltypes="true" />
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="searcherManager"/>
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="userManager"/>
   <path-action name="SessionValue.loadSessionVariable" bean="moduleManager"/>
@@ -53,7 +53,7 @@
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="inflector"/>
 
   <property name="communitytag">default</property>
-  <path-action name="ProjectModule.loadCommunityTag"/>
+  <path-action name="MediaAdminModule.loadCommunityTag"/>
 
   <property name="themeid">theme</property>
   <path-action name="ThemeModule.loadCurrentTheme" />

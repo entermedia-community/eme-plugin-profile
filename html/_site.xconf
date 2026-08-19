@@ -48,7 +48,7 @@
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="inflector"/>
 
   <property name="communitytag">default</property>
-  <path-action name="ProjectModule.loadCommunityTag"/>
+  <path-action name="MediaAdminModule.loadCommunityTag"/>
 
   <property name="themeid">theme</property>
   <path-action name="ThemeModule.loadCurrentTheme" />

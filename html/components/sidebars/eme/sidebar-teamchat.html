@@ -14,8 +14,8 @@
   
   #if(!$messages.isEmpty())
     #foreach( $message in $messages )
-      #set( $topic = $mediaarchive.getCachedData("collectiveproject",$message.entityid))
-      
+      #set( $channel = $mediaarchive.getCachedData("channel",$message.channel))
+      #set( $topic = $mediaarchive.getCachedData("collectiveproject",$channel.dataid))
       #set( $project = $mediaarchive.getCachedData("librarycollection",$topic.parentcollectionid))
       #set( $community = $mediaarchive.getCachedData("communitytag",$project.communitytag))
       #set( $otherperson =  $chatManager.getOtherChatUser($project,$user) )
@@ -50,7 +50,10 @@
               <b> #text($project) </b>
             #end
             <div class="messagearea">
-              #set($msg = $message.message)
+              #set($msg = $message.messageplain)
+              #ifnull($msg)
+                #set($msg = $message.message)               
+              #end
               #if($msg)
                 $url_util.escapeMessage($msg,26, true)
               #end
