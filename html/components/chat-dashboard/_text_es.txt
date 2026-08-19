@@ -1,0 +1,5 @@
+#
+#Tue Aug 18 16:50:32 CST 2026
+Edit\ Profile=Editar perfil
+Portfolio=Portafolio
+Say\ Hello=Di hola
