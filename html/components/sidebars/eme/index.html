@@ -21,7 +21,7 @@
   <div class="sidebar-scroll mt-1">
 
     <div class="pb-2">
-      #if($user.getId() == $emeprofile.owner)
+      ##if($user.getId() == $emeprofile.owner)
         <a href="/${emeprofile.urlname}" 
           class="ajax file-row" 
           data-targetdiv="applicationstructure"
@@ -35,7 +35,7 @@
             <img  src="${userimageurl}" title="$!followeruser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
           <span class="f-name">#text($emeprofile) [[Profile]]</span>
         </a>
-      #end
+      ##end
     </div>
   
     
