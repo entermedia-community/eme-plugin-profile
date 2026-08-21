@@ -7,6 +7,7 @@
   <property name="fallbackdirectory">/community/default</property>
 
   <property name="findroot">/site/blockfind</property>
+  
   <property name="sidebarcomponent">eme</property>
   <property name="communityhome">/${siteid}/profile</property> 
   <property name="searchtypeFromRequest">true</property>

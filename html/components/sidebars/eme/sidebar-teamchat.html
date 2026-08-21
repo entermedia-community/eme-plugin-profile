@@ -27,7 +27,7 @@
           #set($projectlink = "/project/chat/index.html?collectionid=${project.id}")
         #end	
 
-        <a href="${projectlink}" title="[[Messages on]] ${project}" class="session-row">
+        <a href="${projectlink}" title="[[Messages on]] ${project}" class="session-row #if($project.id== $librarycol.id) active #end">
           #ifnotnull($otherperson)
             $context.putPageValue("chatuser",$otherperson)
             $pages.include("${apphome}/users/icon.html",$context)
