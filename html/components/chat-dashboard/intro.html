@@ -3,11 +3,13 @@
 <section class="eme-chat-hero">
   <div class="container p-5 mt-4">
     <div class="row g-5">
-      <div class="col-auto eme-avatar">
+      <div class="col-auto">
+        <div class="eme-avatar">
         #set($asset = $mediaarchive.getAsset($emeprofile.primarymedia))
         $context.putPageValue("asset", $asset)
         $context.putPageValue("imagesize", "image200x200")
         $pages.include("/${applicationid}/views/modules/asset/results/default/thumbnails/image.html",$context) 
+        </div>
       </div>
 
       <div class="col">
@@ -46,13 +48,20 @@
         #end
 
         <div class="d-flex gap-3 flex-wrap mt-3">
+          
           #ifnotnull($user)
             <a class="emdialog btn btn-lg btn-cta py-2 px-3"
               href="$apphome/views/modules/emeprofile/editors/fullscreenchat/index.html"
               data-hidefooter="true"
-              data-entityid="$emeprofile.id"
-              data-entitymoduleid="emeprofile">
-              <i class="bi bi-chat me-1"></i> #if($user.id == $emeprofile.owner)Open Chat#{else}Say Hello#end
+              data-entityid="$!{emeprofile.id}"
+              data-modalsize="lg"
+              title="EME Chat">
+              <i class="bi bi-chat me-1"></i> 
+              #if($user.id == $emeprofile.owner)
+              [[Open Chat]]
+              #else
+              [[Say Hello]]
+              #end
             </a>
             #if($user.id == $emeprofile.owner)
               <a href="$apphome/components/chat-dashboard/intro-edit.html" data-id="$emeprofile.id" class="emdialog btn btn-lg btn-accent py-2 px-3">
@@ -62,7 +71,7 @@
           #end
           #ifnull($user)
             <a href="$apphome/authentication/ajaxlogin.html" class="btn btn-lg btn-accent py-2 px-3">
-              <i class="bi bi-chat me-1"></i> [[Say Hello]]
+              <i class="bi bi-chat me-1"></i> [[Login to say Hello]]
             </a>
           #end
         </div>

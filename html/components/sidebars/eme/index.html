@@ -19,25 +19,26 @@
   </div>  
 
   <div class="sidebar-scroll mt-1">
-
-    <div class="pb-2">
-      #if($user.getId() == $emeprofile.owner)
-        <a href="/${emeprofile.urlname}" 
-          class="ajax file-row" 
-          data-targetdiv="applicationstructure"
-          data-oemaxlevel="3"
-          data-updateurl="true"
-          title="#text($emeprofile) [[Profile]]">
-          #set( $userimageurl = $mediaarchive.asLinkToUserProfile($user) )
-            #if(!$userimageurl)
-              #set( $userimageurl = "$!apphome/theme/images/user.svg" )
-            #end 
-            <img  src="${userimageurl}" title="$!followeruser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
-          <span class="f-name">#text($emeprofile) [[Profile]]</span>
-        </a>
-      #end
-    </div>
-  
+    
+    #if($emeprofile && !$librarycol)
+      #set($emeprofileuserid = $emeprofile.get("owner"))
+      #set($emeprofileuser = $mediaarchive.getUser($emeprofileuserid))
+      <div class="pb-2 ">
+          <a href="/${emeprofile.urlname}" 
+            class="ajax file-row" 
+            data-targetdiv="applicationstructure"
+            data-oemaxlevel="3"
+            data-updateurl="true"
+            title="#text($emeprofile) [[Profile]]">
+            #set( $userimageurl = $mediaarchive.asLinkToUserProfile($emeprofileuser) )
+              #if(!$userimageurl)
+                #set( $userimageurl = "$!apphome/theme/images/user.svg" )
+              #end 
+              <img  src="${userimageurl}" title="$!emeprofileuser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
+            <span class="f-name">#text($emeprofile) [[Profile]]</span>
+          </a>
+      </div>
+    #end
     
     <div class="pb-2">
       #ifnotnull($librarycol)
