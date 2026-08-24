@@ -83,21 +83,25 @@
 					#ifnotnull($myemeprofile)
 						#set($emeprofileuserid = $myemeprofile.get("owner"))
 						#set($emeprofileuser = $mediaarchive.getUser($emeprofileuserid))
-						<li class="dropdown">
-							<a href="/${myemeprofile.urlname}" 
-							class="ajax btn-topnav btn-topnav-profile dropdown-toggle no-icon" 
-							data-bs-toggle="dropdown"
-							data-targetdiv="applicationstructure"
-							data-oemaxlevel="3"
-							data-updateurl="true"
-							title="[[My Profile]]">
-							#set( $userimageurl = $mediaarchive.asLinkToUserProfile($emeprofileuser) )
-								#if(!$userimageurl)
-								#set( $userimageurl = "$!apphome/theme/images/user.svg" )
-								#end 
-								<img  src="${userimageurl}" title="$!emeprofileuser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
-							<span class="f-name">#text($myemeprofile)</span>
-							</a>
+						<li class="dropdown-group">
+							<div class="btn-group">
+								<a href="/${myemeprofile.urlname}" 
+								class="ajax btn-topnav btn-topnav-profile no-icon" 
+								data-targetdiv="applicationstructure"
+								data-oemaxlevel="3"
+								data-updateurl="true"
+								title="[[My Profile]]">
+								#set( $userimageurl = $mediaarchive.asLinkToUserProfile($emeprofileuser) )
+									#if(!$userimageurl)
+									#set( $userimageurl = "$!apphome/theme/images/user.svg" )
+									#end 
+									<img  src="${userimageurl}" title="$!emeprofileuser.getAnonNickName()" width="30px" height="30px" class="me-2" style="border-radius:8px;">
+								<span class="f-name">#text($myemeprofile)</span>
+								</a>
+								<a href="#" class="btn-topnav btn-topnav-arrow btn-topnav-profile dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" role="button">
+									<span class="visually-hidden">Toggle Dropdown</span>
+								</a>
+							
 							<ul class="dropdown-menu end-0"> 
 								#if($canviewsettings && $pendingorders.size() > 0)
 									<li><a href="$apphome/views/modules/order/editors/orderlistpending/index.html" 
@@ -185,6 +189,7 @@
 									</a> </li>
 								#end 
 							</ul>
+							</div>
 						</li>
 					#end
 				
