@@ -1,6 +1,10 @@
 <div class="py-2 ps-5" id="sbFilesBody">
   #set($enttiyviews = $mediaarchive.query("view").exact("moduleid", "emeprofile").exact("systemdefined","false").sort("orderingUp").named("view").search($context) )
-    
+  
+#ifnull($topmenuselected)
+  #set($topmenuselected = $entitymoduleviewid)
+#end
+
   #foreach($entityview in $enttiyviews)
     #set( $viewdata = $mediaarchive.getCachedData("view", $entityview.id))
     #set($viewmodule = $mediaarchive.query("module").exact("id", $viewdata.rendertable).searchOne())

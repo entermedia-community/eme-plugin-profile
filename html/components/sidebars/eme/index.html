@@ -18,14 +18,14 @@
     </button>
   </div>  
 
-  <div class="sidebar-scroll mt-1">
+  <div class="sidebar-scroll ">
     
     #if($emeprofile && !$librarycol)
       #set($emeprofileuserid = $emeprofile.get("owner"))
       #set($emeprofileuser = $mediaarchive.getUser($emeprofileuserid))
-      <div class="pb-2 ">
+      <div class=" ">
           <a href="/${emeprofile.urlname}" 
-            class="ajax file-row" 
+            class="ajax file-row active" 
             data-targetdiv="applicationstructure"
             data-oemaxlevel="3"
             data-updateurl="true"

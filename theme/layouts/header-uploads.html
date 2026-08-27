@@ -4,7 +4,7 @@
 #set($uploadtoentityid = $content.get("globaluploadtoentityid"))
 #ifnotnull($uploadtomoduleid)
 <li>
-	<a href="$siteroot$applink/views/modules/${uploadtomoduleid}/editors/entitycustomupload/tabs/index.html" 
+	<a href="$siteroot$applink/views/modules/$!{uploadtomoduleid}/editors/entitycustomupload/tabs/index.html" 
 		class='btn-topnav btn-accent emdialog' 
 		data-dialogid="entityuploadto"
 		data-entityid="${uploadtoentityid}"
@@ -16,8 +16,9 @@
 	</a>
 </li> 
 #end
+
 #ifnull($uploadtomoduleid)
-	#if( $uploadmodules > 0 && $canviewupload )
+	#if( $uploadmodules.size() > 0 && $canviewupload )
 		<li class="dropdown">
 			<a class="btn-topnav dropdown-toggle" href="#" role="button" id="dropdownMenuUploadTo" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="pe-1">[[Upload To]]</span>
