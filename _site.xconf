@@ -2,7 +2,7 @@
 
 <page>
   
-  <property name="catalogid">catalog</property>
+  <property name="catalogid">site/catalog</property>
   <property name="applicationid">eme</property>
   <property name="fallbackdirectory">/community/default</property>
   <property name="findroot">/site/blockfind</property>
