@@ -199,16 +199,7 @@
   <permission name="viewsidebarhelp">
     <userprofile name="viewsidebarhelp" value="true"/>
   </permission>
-      <permission name="viewassetdownloadhistory">
-    <userprofile name="viewassetdownloadhistory" value="true"/>
-  </permission>
-  <permission name="viewassetedithistory">
-    <userprofile name="viewassetedithistory" value="true"/>
-  </permission>
-    <permission name="viewassetorderhistory">
-    <userprofile name="viewassetorderhistory" value="true"/>
-  </permission>
-            <permission name="viewsettings">
+  <permission name="viewsettings">
     <userprofile name="viewsettings" value="true"/>
   </permission>
   <permission name="viewmodulesettings">
