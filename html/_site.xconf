@@ -124,7 +124,7 @@
   <script src="/${applicationid}/components/javascript/emedia/results.js" id="results"/>
   
   
-  <style id="dropdown-css" href="/${applicationid}/theme/styles/dropdown.css"/>
+  <style id="dropdown-css" href="/finder/find/theme/styles/dropdown.css" />
   <script src="/${applicationid}/components/javascript/emedia/brick.js" id="jquerybrick"/>
   <script src="/${applicationid}/components/javascript/emedia/brickvertical.js" id="jquerybrickvertical"/>
   <script defer="true" src="/${applicationid}/components/javascript/chart/Chart.bundle.js" id="chartjs"/>
