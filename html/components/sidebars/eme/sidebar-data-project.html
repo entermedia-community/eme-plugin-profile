@@ -51,6 +51,23 @@
     </a>
   #end
 
+
+  <a 
+    href="${urlname}/services/finances/dashboard.html"  
+      class="ajax activelistener file-row " 
+      data-targetdivinner="applicationcontent"
+      data-updateurl="true"
+      data-scrolltotop="true"
+      data-entitymoduleviewid="$entityview.id"
+      data-entitymoduleid="$entityview.moduleid"
+      data-oemaxlevel="2"
+      data-entityid="$librarycol.id"
+      title="[[Finances]] $entityview.name">
+      <i class="bi bi-cart module-icon f-icon"></i>
+      <span class="f-name">[[Finances]]</span>
+    </a>
+  
+
   <a 
     href="${urlname}/admin/index.html"  
       class="ajax activelistener file-row #if( $topmenuselected == $entityview.getId()) active#end" 
