@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <page>
-  
+
   <property name="catalogid">catalog</property>
   <property name="applicationid">profile</property>
   <property name="fallbackdirectory">/community/default</property>
 
   <property name="findroot">/site/blockfind</property>
-  
+
   <property name="sidebarcomponent">eme</property>
-  <property name="communityhome">/${siteid}/profile</property> 
+  <property name="communityhome">/${siteid}/profile</property>
   <property name="searchtypeFromRequest">true</property>
   <property name="profilemanagerid">${catalogid}</property>
   <property name="thumbsize">thumb</property>
@@ -20,10 +20,10 @@
   <property name="enableprofilefilters">true</property>
   <property name="collectionroot">/${applicationid}/views/modules/librarycollection/media</property>
   <property name="login-path">/${applicationid}/authentication/nopermissions.html</property>
-  
+
   <property name="editable">false</property>
-  
-  <property name="allowguestregistration">false</property>
+
+  <property name="allowguestregistration">true</property>
   <property name="makeversion">false</property>
   <property name="systemfromemailname">EnterMedia</property>
 
@@ -55,7 +55,7 @@
   <path-action name="ThemeModule.loadCurrentTheme" />
 
   <path-action name="FinderModule.loadEmeProfile" />
-  
+
   <path-action name="FinderModule.loadTopMenu" />
 
   <inner-layout>/${applicationid}/theme/layouts/applicationcontent.html</inner-layout>
@@ -122,8 +122,8 @@
   <script defer="true" src="/${applicationid}/components/javascript/emedia/upload.js" id="upload"/>
   <script defer="true" src="/${applicationid}/components/javascript/emedia/quicksearch.js" id="quicksearch"/>
   <script src="/${applicationid}/components/javascript/emedia/results.js" id="results"/>
-  
-  
+
+
   <style id="dropdown-css" href="/finder/find/theme/styles/dropdown.css" />
   <script src="/${applicationid}/components/javascript/emedia/brick.js" id="jquerybrick"/>
   <script src="/${applicationid}/components/javascript/emedia/brickvertical.js" id="jquerybrickvertical"/>
@@ -133,10 +133,10 @@
 
 
   <permission name="view">
-      <or>
+    <or>
       <userprofile name="view" value="true"/>
       <boolean value="true"/>
-      </or>
+    </or>
   </permission>
   <permission name="quicksearch">
     <userprofile name="quicksearch" value="true"/>
@@ -162,10 +162,10 @@
   <permission name="maximize">
     <userprofile name="maximize" value="true"/>
   </permission>
-    <permission name="vieworders">
+  <permission name="vieworders">
     <userprofile name="vieworders" value="true"/>
   </permission>
-    <permission name="viewbasket">
+  <permission name="viewbasket">
     <userprofile name="viewbasket" value="true"/>
   </permission>
   <permission name="sharetosocialmedia">
@@ -177,16 +177,16 @@
   <permission name="multiedit">
     <userprofile name="multiedit" value="true"/>
   </permission>
-                <permission name="deletecomments">
+  <permission name="deletecomments">
     <and>
       <userprofile name="deletecomments" value="true"/>
       <pagevalue name="caneditasset" equals="true"/>
     </and>
   </permission>
-      <permission name="viewmediaviewer">
+  <permission name="viewmediaviewer">
     <userprofile name="viewmediaviewer" value="true"/>
   </permission>
-    <permission name="viewassetdownloads">
+  <permission name="viewassetdownloads">
     <userprofile name="viewassetdownloads" value="true"/>
   </permission>
   <permission name="viewsidebarhelp">
@@ -201,25 +201,25 @@
       <userprofile name="viewmodulesettings" value="true"/>
     </or>
   </permission>
-        <permission name="deleteasset">
+  <permission name="deleteasset">
     <and>
       <userprofile name="deleteasset" value="true"/>
       <pagevalue name="caneditasset" equals="true"/>
     </and>
   </permission>
-      <permission name="viewfilemenu">
+  <permission name="viewfilemenu">
     <userprofile name="viewfilemenu" value="true"/>
   </permission>
-    <permission name="vote">
+  <permission name="vote">
     <userprofile name="vote" value="true"/>
   </permission>
-      <permission name="socialshare">
+  <permission name="socialshare">
     <userprofile name="socialshare" value="true"/>
   </permission>
-      <permission name="exportdata">
+  <permission name="exportdata">
     <userprofile name="exportdata" value="true"/>
   </permission>
-    <permission name="edittablecolumns">
+  <permission name="edittablecolumns">
     <userprofile name="edittablecolumns" value="true"/>
   </permission>
   <permission name="viewsearcheditor">
@@ -240,7 +240,7 @@
   <permission name="viewmodulelist">
     <userprofile name="viewmodulelist" value="true"/>
   </permission>
-    <permission name="viewerrors">
+  <permission name="viewerrors">
     <userprofile name="viewerrors" value="true"/>
   </permission>
   <permission name="editlists">
@@ -251,7 +251,7 @@
   <permission name="forcewatermarkasset">
     <userprofile name="forcewatermarkasset" value="true"/>
   </permission>
-    <permission name="develop">
+  <permission name="develop">
     <userprofile name="viewdevelopertools" value="true"/>
   </permission>
   <permission name="viewmetadatageneral">
@@ -260,10 +260,10 @@
       <userprofile name="viewmetadatageneral" value="true"/>
     </or>
   </permission>
-      <permission name="createlivemedia">
+  <permission name="createlivemedia">
     <userprofile name="createlivemedia" value="true"/>
   </permission>
-        <permission name="actasotherusers">
+  <permission name="actasotherusers">
     <userprofile name="editusersgroups" value="true"/>
   </permission>
   <permission name="editusersgroups">
@@ -278,7 +278,7 @@
   <permission name="viewallorders">
     <userprofile name="viewallorders" value="true"/>
   </permission>
-    <permission name="addtofavorites">
+  <permission name="addtofavorites">
     <userprofile name="addtofavorites" value="true"/>
   </permission>
   <permission name="viewallassets">
@@ -290,7 +290,7 @@
   <permission name="hidedeletedassets">
     <userprofile name="hidedeletedassets" value="true"/>
   </permission>
-      <permission name="viewentitiestopmenu">
+  <permission name="viewentitiestopmenu">
     <userprofile name="viewentitiestopmenu" value="true"/>
   </permission>
   <permission name="viewappsmenu">
@@ -299,7 +299,7 @@
   <permission name="viewentitiesbreadcrumb">
     <userprofile name="viewentitiesbreadcrumb" value="true"/>
   </permission>
-    <permission name="sidebar">
+  <permission name="sidebar">
     <userprofile name="sidebar" value="true"/>
   </permission>
   <permission name="togglesidebar">
@@ -314,5 +314,5 @@
   <permission name="runaiinformatics">
     <userprofile name="runaiinformatics" value="true"/>
   </permission>
-  
+
 </page>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <page>
-  
+
   <property name="catalogid">site/catalog</property>
   <property name="applicationid">eme</property>
   <property name="fallbackdirectory">/community/default</property>
   <property name="findroot">/site/blockfind</property>
   <property name="sidebarcomponent">eme</property>
-  <property name="communityhome">/${siteid}/eme</property> <!-- TODO: delete? -->
+  <property name="communityhome">/${siteid}/eme</property>  <!-- TODO: delete? -->
   <property name="searchtypeFromRequest">true</property>
   <property name="profilemanagerid">${catalogid}</property>
   <property name="thumbsize">thumb</property>
@@ -22,14 +22,14 @@
   <property name="login-path">/${applicationid}/authentication/nopermissions.html</property>
   <property name="applicationid">eme</property>
   <property name="editable">false</property>
-  
+
   <property name="hitsname">hits</property>
-  <property name="allowguestregistration">false</property>
+  <property name="allowguestregistration">true</property>
   <property name="makeversion">false</property>
   <property name="catalogid">catalog</property>
   <property name="systemfromemailname">EnterMedia</property>
   <property name="shownav">true</property>
-  
+
 
   <page-loader loader="projectLoader" />
   <path-action name="Admin.autoLogin"/>
@@ -41,7 +41,7 @@
   <path-action name="DesktopModule.loadDesktop"/>
   <path-action name="DataEditModule.loadEditHome"/>
   <path-action name="DataEditModule.loadSearchHome"/>
-  <path-action name="MediaArchiveModule.getMediaArchive"  alltypes="true" />
+  <path-action name="MediaArchiveModule.getMediaArchive" alltypes="true" />
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="searcherManager"/>
   <path-action name="PageValue.loadPageVariable" allowduplicates="true" bean="userManager"/>
   <path-action name="SessionValue.loadSessionVariable" bean="moduleManager"/>
@@ -59,7 +59,7 @@
   <path-action name="ThemeModule.loadCurrentTheme" />
 
   <path-action name="FinderModule.loadEmeProfile" />
-  
+
   <path-action name="FinderModule.loadTopMenu" />
 
   <property name="allowguestregistration">true</property>
@@ -137,7 +137,7 @@
   <script defer="true" src="/${applicationid}/components/javascript/chart/Chart.bundle.js" id="chartjs"/>
   <script src="/${applicationid}/components/javascript/jquery.cuepoint.js" id="jscuepoint"/>
   <script src="/${applicationid}/views/modules/asset/editor/closedcaptions/closedcaptions.js" id="jsclosedcaptions"/>
-  
+
 
   <permission name="quicksearch">
     <userprofile name="quicksearch" value="true"/>
@@ -164,13 +164,13 @@
   <permission name="maximize">
     <userprofile name="maximize" value="true"/>
   </permission>
-    <permission name="vieworders">
+  <permission name="vieworders">
     <userprofile name="vieworders" value="true"/>
   </permission>
-    <permission name="viewbasket">
+  <permission name="viewbasket">
     <userprofile name="viewbasket" value="true"/>
   </permission>
-    <permission name="sharetosocialmedia">
+  <permission name="sharetosocialmedia">
     <userprofile name="sharetosocialmedia" value="true"/>
   </permission>
   <permission name="createnewrecord">
@@ -179,25 +179,25 @@
   <permission name="multiedit">
     <userprofile name="multiedit" value="true"/>
   </permission>
-                <permission name="deletecomments">
+  <permission name="deletecomments">
     <and>
       <userprofile name="deletecomments" value="true"/>
       <pagevalue name="caneditasset" equals="true"/>
     </and>
   </permission>
-      <permission name="viewassetdownloads">
+  <permission name="viewassetdownloads">
     <userprofile name="viewassetdownloads" value="true"/>
   </permission>
   <permission name="viewmediaviewer">
     <userprofile name="viewmediaviewer" value="true"/>
   </permission>
-    <permission name="viewassetdownloads">
+  <permission name="viewassetdownloads">
     <userprofile name="viewassetdownloads" value="true"/>
   </permission>
   <permission name="viewsidebarhelp">
     <userprofile name="viewsidebarhelp" value="true"/>
   </permission>
-  
+
   <permission name="viewsettings">
     <userprofile name="viewsettings" value="true"/>
   </permission>
@@ -207,25 +207,25 @@
       <userprofile name="viewmodulesettings" value="true"/>
     </or>
   </permission>
-        <permission name="deleteasset">
+  <permission name="deleteasset">
     <and>
       <userprofile name="deleteasset" value="true"/>
       <pagevalue name="caneditasset" equals="true"/>
     </and>
   </permission>
-      <permission name="viewfilemenu">
+  <permission name="viewfilemenu">
     <userprofile name="viewfilemenu" value="true"/>
   </permission>
-    <permission name="vote">
+  <permission name="vote">
     <userprofile name="vote" value="true"/>
   </permission>
-      <permission name="socialshare">
+  <permission name="socialshare">
     <userprofile name="socialshare" value="true"/>
   </permission>
-      <permission name="exportdata">
+  <permission name="exportdata">
     <userprofile name="exportdata" value="true"/>
   </permission>
-    <permission name="edittablecolumns">
+  <permission name="edittablecolumns">
     <userprofile name="edittablecolumns" value="true"/>
   </permission>
   <permission name="viewsearcheditor">
@@ -246,7 +246,7 @@
   <permission name="viewmodulelist">
     <userprofile name="viewmodulelist" value="true"/>
   </permission>
-    <permission name="viewerrors">
+  <permission name="viewerrors">
     <userprofile name="viewerrors" value="true"/>
   </permission>
   <permission name="editlists">
@@ -257,7 +257,7 @@
   <permission name="forcewatermarkasset">
     <userprofile name="forcewatermarkasset" value="true"/>
   </permission>
-    <permission name="develop">
+  <permission name="develop">
     <userprofile name="viewdevelopertools" value="true"/>
   </permission>
   <permission name="viewmetadatageneral">
@@ -269,10 +269,10 @@
   <permission name="view">
     <userprofile name="view" value="true"/>
   </permission>
-      <permission name="createlivemedia">
+  <permission name="createlivemedia">
     <userprofile name="createlivemedia" value="true"/>
   </permission>
-        <permission name="actasotherusers">
+  <permission name="actasotherusers">
     <userprofile name="editusersgroups" value="true"/>
   </permission>
   <permission name="editusersgroups">
@@ -284,10 +284,10 @@
   <permission name="copycategory">
     <userprofile name="copycategory" value="true"/>
   </permission>
-    <permission name="viewallorders">
+  <permission name="viewallorders">
     <userprofile name="viewallorders" value="true"/>
   </permission>
-    <permission name="addtofavorites">
+  <permission name="addtofavorites">
     <userprofile name="addtofavorites" value="true"/>
   </permission>
   <permission name="viewallassets">
@@ -299,7 +299,7 @@
   <permission name="hidedeletedassets">
     <userprofile name="hidedeletedassets" value="true"/>
   </permission>
-      <permission name="viewentitiestopmenu">
+  <permission name="viewentitiestopmenu">
     <userprofile name="viewentitiestopmenu" value="true"/>
   </permission>
   <permission name="viewappsmenu">
@@ -308,7 +308,7 @@
   <permission name="viewentitiesbreadcrumb">
     <userprofile name="viewentitiesbreadcrumb" value="true"/>
   </permission>
-    <permission name="sidebar">
+  <permission name="sidebar">
     <userprofile name="sidebar" value="true"/>
   </permission>
   <permission name="togglesidebar">
@@ -326,5 +326,5 @@
   <permission name="runaiinformatics">
     <userprofile name="runaiinformatics" value="true"/>
   </permission>
-  
+
 </page>
